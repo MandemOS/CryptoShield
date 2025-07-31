@@ -337,7 +337,7 @@ import json
 import time
 
 # ✅ Chainstack endpoint (BSC)
-bsc_rpc = "https://bsc-mainnet.core.chainstack.com/80268491e8eb80d9ac669af634815903"
+bsc_rpc = "https://bsc-mainnet.core.chainstack.com/"
 web3 = Web3(Web3.HTTPProvider(bsc_rpc))
 
 # ✅ Inject middleware for BSC (PoA)
