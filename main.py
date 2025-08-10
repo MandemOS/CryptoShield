@@ -1,9 +1,9 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'HONEY TRACKER'))
-sys.path.append(os.path.join(os.path.dirname(__file__), 'RUG PULL TRACKER'))
-sys.path.append(os.path.join(os.path.dirname(__file__), 'LIQUIDITY TRACKER'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'honey_tracker'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'rug_pull_tracker'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'liquid'))
 
 from honey_tracker import run_honeypot_detector
 from rug_pull_tracker import run_rug_pull_checker
