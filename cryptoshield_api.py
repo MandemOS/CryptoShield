@@ -19,14 +19,14 @@ else:
 BASE_DIR = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(BASE_DIR, "honey_tracker"))
 sys.path.insert(0, os.path.join(BASE_DIR, "rug_pull_tracker"))
-sys.path.insert(0, os.path.join(BASE_DIR, "liquid"))  # ← updated folder name
+sys.path.insert(0, os.path.join(BASE_DIR, "liquid"))
 sys.path.insert(0, os.path.join(BASE_DIR, "lp"))
 
-# Import your existing bot functions
-from honeypot_detector import run_honeypot
-from rug_pull_checker import run_rugpull
-from liquidity_checker import run_liquidity  # ← updated import path
-from lp_lock_checker import run_lp_lock_check
+# Corrected imports with folder paths
+from honey_tracker.honeypot_detector import run_honeypot
+from rug_pull_tracker.rug_pull_checker import run_rugpull
+from liquid.liquidity_checker import run_liquidity
+from lp.lp_lock_checker import run_lp_lock_check
 
 # PancakeSwap factory info for LP token lookup
 PANCAKE_FACTORY_ADDRESS = "0xca143ce32fe78f1f7019d7d551a6402fc5350c73"
