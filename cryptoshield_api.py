@@ -17,10 +17,7 @@ else:
 
 # Add your bot folders to sys.path for imports
 BASE_DIR = os.path.dirname(__file__)
-sys.path.insert(0, os.path.join(BASE_DIR, "honey_tracker"))
-sys.path.insert(0, os.path.join(BASE_DIR, "rug_pull_tracker"))
-sys.path.insert(0, os.path.join(BASE_DIR, "liquid"))
-sys.path.insert(0, os.path.join(BASE_DIR, "lp"))
+sys.path.insert(0, BASE_DIR)
 
 # Corrected imports with folder paths
 from honey_tracker.honeypot_detector import run_honeypot
