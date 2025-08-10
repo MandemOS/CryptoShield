@@ -17,10 +17,10 @@ else:
 
 # Add your bot folders to sys.path for imports
 BASE_DIR = os.path.dirname(__file__)
-sys.path.insert(0, os.path.join(BASE_DIR, "HONEY TRACKER"))
-sys.path.insert(0, os.path.join(BASE_DIR, "RUG PULL TRACKER"))
-sys.path.insert(0, os.path.join(BASE_DIR, "LIQUID"))  # ← updated folder name
-sys.path.insert(0, os.path.join(BASE_DIR, "LP"))
+sys.path.insert(0, os.path.join(BASE_DIR, "honey_tracker"))
+sys.path.insert(0, os.path.join(BASE_DIR, "rug_pull_tracker"))
+sys.path.insert(0, os.path.join(BASE_DIR, "liquid"))  # ← updated folder name
+sys.path.insert(0, os.path.join(BASE_DIR, "lp"))
 
 # Import your existing bot functions
 from honeypot_detector import run_honeypot
@@ -53,6 +53,10 @@ class ScanResult(BaseModel):
     lp_lock: Optional[list]
     score: int
     verdict: str
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to CryptoShield API. Use /scan/{token_address} to scan tokens."}
 
 def get_lp_token_address(token_address: str, chainstack_url: str) -> Optional[str]:
     try:
