@@ -30,10 +30,10 @@ PANCAKE_FACTORY_ABI = [
 WBNB_ADDRESS = "0xBB4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
 
 # Adjust sys.path to import your bots from their folders
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'HONEY TRACKER'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'RUG PULL TRACKER'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'LIQUID'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'LP'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'honey_tracker'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'rug_pull_tracker'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'liquid'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'lp'))
 
 # Import your bot functions
 from honeypot_detector import run_honeypot
